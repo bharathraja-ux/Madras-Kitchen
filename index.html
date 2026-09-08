@@ -118,8 +118,15 @@
         </ul>
       </nav>
 
-      <!-- Header Action -->
+      <!-- Header Action Group -->
       <div class="header-actions">
+        <!-- Interactive Cart Trigger Button -->
+        <button class="btn btn-cart" id="open-cart-btn" aria-label="View current food order">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-label">Order</span>
+          <span class="cart-count-badge" id="nav-cart-count">0</span>
+        </button>
+
         <a href="tel:04424720739" class="btn btn-call" id="nav-call-btn">
           <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span>Call Now</span>
@@ -153,18 +160,14 @@
           <li><a href="#menu" class="mobile-link">Popular Menu</a></li>
           <li><a href="#why-us" class="mobile-link">Why Choose Us</a></li>
           <li><a href="#reviews" class="mobile-link">Customer Reviews</a></li>
-          <li><a href="#visit" class="mobile-link">Visit & Location</a></li>
+          <li><a href="#visit" class="mobile-link">Visit &amp; Location</a></li>
         </ul>
       </nav>
       <div class="mobile-drawer-footer">
-        <div class="drawer-info-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Open until 10:30 PM</span>
-        </div>
-        <div class="drawer-info-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Dr Ambedkar Rd, Kodambakkam</span>
-        </div>
+        <button type="button" class="btn btn-cart btn-block" id="drawer-cart-btn" style="margin-bottom: 0.75rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span>View Order (<strong id="drawer-cart-count">0</strong> items)</span>
+        </button>
         <a href="tel:04424720739" class="btn btn-primary btn-block">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Call 044 2472 0739
@@ -214,7 +217,11 @@
               <span>Explore Menu</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="tel:04424720739" class="btn btn-secondary" id="hero-call-btn">
+            <button type="button" class="btn btn-secondary" id="hero-order-online-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              <span>Start Order</span>
+            </button>
+            <a href="tel:04424720739" class="btn btn-outline-white" id="hero-call-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span>Call Now</span>
             </a>
@@ -244,7 +251,7 @@
               <span class="badge-dot"></span>
               <div class="badge-text">
                 <span class="badge-title">Fresh From The Wok</span>
-                <span class="badge-sub">Flavourful & Generous Portions</span>
+                <span class="badge-sub">Flavourful &amp; Generous Portions</span>
               </div>
             </div>
           </div>
@@ -338,7 +345,7 @@
                 <div class="highlight-bullet"></div>
                 <div class="highlight-content">
                   <strong>Wide variety</strong>
-                  <span>Soups, rice, noodles, chicken, veg & pasta</span>
+                  <span>Soups, rice, noodles, chicken, veg &amp; pasta</span>
                 </div>
               </div>
               <div class="highlight-card">
@@ -358,7 +365,7 @@
               <div class="highlight-card">
                 <div class="highlight-bullet"></div>
                 <div class="highlight-content">
-                  <strong>Takeaway & delivery</strong>
+                  <strong>Takeaway &amp; delivery</strong>
                   <span>Dine-in or enjoy warm at home</span>
                 </div>
               </div>
@@ -387,7 +394,7 @@
           <span class="section-eyebrow">WHAT'S POPULAR</span>
           <h2 class="section-title" id="menu-heading">Favourites worth trying</h2>
           <p class="section-subtitle">
-            A comforting selection of popular Chinese dishes, hearty soups, fried rice, noodles and pasta crafted for great taste and generous portions.
+            A comforting selection of popular Chinese dishes, hearty soups, fried rice, noodles and pasta crafted for great taste and generous portions. Click "+ Add to Order" to create your meal request.
           </p>
         </div>
 
@@ -431,10 +438,10 @@
               <p class="menu-card-desc">Comforting chicken soup with noodles.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Chicken Noodle Soup via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Chicken Noodle Soup" data-cat="Soup" aria-label="Add Chicken Noodle Soup to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -464,10 +471,10 @@
               <p class="menu-card-desc">A popular filling favourite.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Chicken Fried Rice via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Chicken Fried Rice" data-cat="Rice" aria-label="Add Chicken Fried Rice to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -497,10 +504,10 @@
               <p class="menu-card-desc">Bold, warming and flavourful.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Chicken Hot and Sour Soup via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Chicken Hot &amp; Sour Soup" data-cat="Soup" aria-label="Add Chicken Hot &amp; Sour Soup to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -530,10 +537,10 @@
               <p class="menu-card-desc">A classic spicy Indo-Chinese favourite.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Chilly Chicken via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Chilly Chicken" data-cat="Chicken" aria-label="Add Chilly Chicken to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -563,10 +570,10 @@
               <p class="menu-card-desc">A hearty soup option.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Chicken Mushroom Soup via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Chicken Mushroom Soup" data-cat="Soup" aria-label="Add Chicken Mushroom Soup to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -596,10 +603,10 @@
               <p class="menu-card-desc">A comforting vegetarian choice.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Veg Corn Soup via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Veg Corn Soup" data-cat="Vegetarian" aria-label="Add Veg Corn Soup to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -628,10 +635,10 @@
               <p class="menu-card-desc">A filling pasta option.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Non Veg Pasta via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Non Veg Pasta" data-cat="Pasta" aria-label="Add Non Veg Pasta to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -661,10 +668,10 @@
               <p class="menu-card-desc">Chicken and pasta combination.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Pasta Chicken via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Pasta Chicken" data-cat="Pasta" aria-label="Add Pasta Chicken to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -694,10 +701,10 @@
               <p class="menu-card-desc">Crunchy and flavourful vegetarian favourite.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Gobi Manchurian via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Gobi Manchurian" data-cat="Vegetarian" aria-label="Add Gobi Manchurian to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -727,10 +734,10 @@
               <p class="menu-card-desc">A classic noodle favourite.</p>
               <div class="menu-card-footer">
                 <span class="card-portion-hint">Satisfying portion</span>
-                <a href="tel:04424720739" class="card-order-action" aria-label="Order Chicken Noodles via call">
-                  <span>Order</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button type="button" class="btn-add-order" data-dish="Chicken Noodles" data-cat="Noodles" aria-label="Add Chicken Noodles to order">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span>Add to Order</span>
+                </button>
               </div>
             </div>
           </article>
@@ -1041,6 +1048,10 @@
               <span>Explore Menu</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
+            <button type="button" class="btn btn-secondary btn-lg" id="final-cta-order">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              <span>Order Online</span>
+            </button>
             <a href="tel:04424720739" class="btn btn-outline-white btn-lg" id="final-cta-call">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span>Call Madras Kitchen</span>
@@ -1131,16 +1142,197 @@
     </div>
   </footer>
 
-  <!-- 10. MOBILE FLOATING ACTION BAR (Thumb friendly) -->
+  <!-- 10. MOBILE FLOATING ACTION BAR -->
   <div class="mobile-floating-bar" id="mobile-call-bar" aria-label="Quick actions">
     <a href="tel:04424720739" class="mobile-float-btn btn-call-float">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span>Call 044 2472 0739</span>
+      <span>Call</span>
     </a>
-    <a href="#menu" class="mobile-float-btn btn-menu-float">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-      <span>Menu</span>
-    </a>
+    <button type="button" class="mobile-float-btn btn-cart-float" id="mobile-cart-trigger">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span>Your Order (<strong id="mobile-cart-count">0</strong>)</span>
+    </button>
+  </div>
+
+  <!-- 11. ONLINE ORDER MODAL & CART DRAWER -->
+  <div class="order-modal-wrapper" id="order-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      
+      <div class="modal-header">
+        <div class="modal-brand-header">
+          <h3 class="modal-title" id="order-modal-title">Your Order — Madras Kitchen</h3>
+          <span class="modal-subtitle">மெட்ராஸ் கிச்சன் • Kodambakkam, Chennai • Open until 10:30 PM</span>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close order dialog">&times;</button>
+      </div>
+
+      <div class="modal-body" id="modal-body">
+        
+        <!-- Order Creation View -->
+        <div id="order-creation-view">
+          
+          <!-- Step 1: Order Type Selector -->
+          <div class="order-type-selector">
+            <span class="selector-heading">Choose Service Mode:</span>
+            <div class="order-type-tabs" role="tablist">
+              <button type="button" class="order-tab active" data-type="dine-in" role="tab" aria-selected="true">
+                <span class="tab-emoji">🍽️</span>
+                <span class="tab-text">Dine-in</span>
+              </button>
+              <button type="button" class="order-tab" data-type="takeaway" role="tab" aria-selected="false">
+                <span class="tab-emoji">🥡</span>
+                <span class="tab-text">Takeaway</span>
+              </button>
+              <button type="button" class="order-tab" data-type="delivery" role="tab" aria-selected="false">
+                <span class="tab-emoji">🛵</span>
+                <span class="tab-text">Delivery</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Selected Items List -->
+          <div class="order-items-section">
+            <div class="order-items-header">
+              <h4 class="items-title">Selected Dishes (<span id="modal-items-total-qty">0</span>)</h4>
+              <button type="button" class="btn-clear-cart" id="btn-clear-cart">Clear All</button>
+            </div>
+            
+            <div class="order-items-list" id="order-items-list">
+              <!-- Empty State by default -->
+              <div class="empty-cart-state" id="empty-cart-state">
+                <div class="empty-icon">🍜</div>
+                <p class="empty-title">Your order is currently empty</p>
+                <span class="empty-desc">Click "+ Add to Order" on any dish in the Popular Menu below to add your favourites.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Positioning Notice -->
+          <div class="order-pricing-notice">
+            <span class="notice-icon">🏷️</span>
+            <div class="notice-text">
+              <strong>Affordable Price Positioning: ₹1–200 per person</strong>
+              <span>Individual dish portions are generous and budget-friendly. Exact bill and taxes are confirmed upon order confirmation.</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Customer Details Form -->
+          <form id="order-details-form" class="order-details-form">
+            <h4 class="form-title">Customer &amp; Service Details</h4>
+
+            <!-- Fields for Dine-in -->
+            <div class="form-fields-group" id="fields-dine-in">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dine-table">Table Number <span class="req">*</span></label>
+                  <input type="text" id="dine-table" name="table" placeholder="e.g. Table 4" required>
+                </div>
+                <div class="form-group">
+                  <label for="dine-name">Your Name</label>
+                  <input type="text" id="dine-name" name="name" placeholder="Guest Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dine-notes">Special Instructions</label>
+                <input type="text" id="dine-notes" name="notes" placeholder="e.g. Medium spicy, extra sauce">
+              </div>
+            </div>
+
+            <!-- Fields for Takeaway -->
+            <div class="form-fields-group hidden" id="fields-takeaway">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="takeaway-name">Your Name <span class="req">*</span></label>
+                  <input type="text" id="takeaway-name" name="name" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                  <label for="takeaway-phone">Mobile Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="takeaway-phone" name="phone" placeholder="e.g. 98400 12345">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="takeaway-time">Pickup Time Preference</label>
+                <select id="takeaway-time" name="pickup_time">
+                  <option value="Ready in 15–20 mins (Fastest)">Ready in 15–20 mins (Fastest)</option>
+                  <option value="In 30–40 mins">In 30–40 mins</option>
+                  <option value="In 1 hour">In 1 hour</option>
+                  <option value="Before closing (10:30 PM)">Before closing (10:30 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Fields for Delivery -->
+            <div class="form-fields-group hidden" id="fields-delivery">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="delivery-name">Your Name <span class="req">*</span></label>
+                  <input type="text" id="delivery-name" name="name" placeholder="Full name">
+                </div>
+                <div class="form-group">
+                  <label for="delivery-phone">Mobile Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="delivery-phone" name="phone" placeholder="e.g. 98400 12345">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="delivery-address">Delivery Address (Kodambakkam &amp; nearby) <span class="req">*</span></label>
+                <textarea id="delivery-address" name="address" rows="2" placeholder="Door No, Street Name, Kodambakkam"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="delivery-landmark">Nearest Landmark</label>
+                <input type="text" id="delivery-landmark" name="landmark" placeholder="e.g. Near Dr Ambedkar Rd / Railway Station">
+              </div>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="modal-footer-actions">
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-submit-order">
+                <span>Confirm &amp; Place Order Request</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+              </button>
+              <div class="direct-call-hint">
+                Prefer to order over phone? <a href="tel:04424720739">Direct Call 044 2472 0739</a>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+        <!-- Step 4: Order Confirmation / Success Receipt Slip -->
+        <div class="order-receipt-slip hidden" id="order-receipt-slip">
+          <div class="receipt-icon-wrap">
+            <span class="receipt-checkmark">✓</span>
+          </div>
+          <h3 class="receipt-title">Order Request Received!</h3>
+          <p class="receipt-id">Reference Code: <strong id="receipt-ref-code">#MK-8421</strong></p>
+          
+          <div class="receipt-summary-box" id="receipt-summary-content">
+            <!-- Populated on form submit -->
+          </div>
+
+          <div class="receipt-dispatch-box">
+            <p>Our Kodambakkam kitchen team has received your order request. To fast-track preparation or confirm immediate dispatch, dial our counter directly:</p>
+            <a href="tel:04424720739" class="btn btn-call btn-lg btn-block">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call Counter: 044 2472 0739</span>
+            </a>
+            <button type="button" class="btn btn-secondary-dark btn-block" id="btn-new-order" style="margin-top: 0.85rem;">
+              <span>Place Another Order</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 12. TOAST NOTIFICATION -->
+  <div class="order-toast" id="order-toast" role="status" aria-live="polite">
+    <span class="toast-check">✓</span>
+    <span class="toast-message" id="toast-message">Added to order</span>
+    <button type="button" class="toast-action" id="toast-view-btn">View Order</button>
   </div>
 
   <!-- JavaScript -->
